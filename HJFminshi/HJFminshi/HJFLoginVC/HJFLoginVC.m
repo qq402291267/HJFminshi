@@ -10,8 +10,8 @@
 #import "comMethod.h"
 #import "HTTPService.h"
 #import "RemoteService.h"
-//#import "LocalService.h"
 #import "UDPMethod.h"
+#import "MBProgressHUD+NJ.h"
 //登入界面下滑高度
 #define loginViewScrollViewContentSize              548
 
