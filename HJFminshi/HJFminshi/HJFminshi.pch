@@ -1,0 +1,68 @@
+//
+//  HJFminshi.pch
+//  HJFminshi
+//
+//  Created by 胡江峰 on 16/3/7.
+//  Copyright © 2016年 胡江峰. All rights reserved.
+//
+
+#ifndef HJFminshi_pch
+#define HJFminshi_pch
+
+
+
+#ifdef __OBJC__
+
+#import "HTTPdefine.h"
+#import "TCPUDPdefine.h"
+#import "comMethod.h"
+
+
+#import "MBProgressHUD+NJ.h"
+#import "DeviceManage.h"
+#import "DeviceDataManager.h"
+#endif
+
+//用户登录名
+#define KEY_StoreageUSERNAME                        @"UserName"
+//用户密码
+#define KEY_StoreageUSERPASSWORD                    @"PassWord"
+
+
+//屏幕宽高
+#define kScreen_Height ([UIScreen mainScreen].bounds.size.height - 20)
+#define kScreen_Width  ([UIScreen mainScreen].bounds.size.width)
+
+//键盘高度
+#define keyboard_Height 216
+
+//判断邮箱是否有效
+#define IS_AVAILABLE_EMAIL(emailString) [[NSPredicate predicateWithFormat:@"SELF MATCHES %@", EMAILREGEX] evaluateWithObject:emailString]
+//邮箱验证
+#define EMAILREGEX @"(?:[A-Za-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"@"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"@"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"@"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"@"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"@"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"@"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+
+//角度／弧度
+#define DEGREES_TO_RADIANS(__ANGLE) ((__ANGLE) * M_PI / 180.0)
+#define RADIANS_TO_DEGREES(__RADIANS) ((__RADIANS) * 180 / M_PI)
+
+//RGB
+#define RGBA(r,g,b,a) [UIColor colorWithRed:(float)r/255.0f green:(float)g/255.0f blue:(float)b/255.0f alpha:a]
+
+//NSLog(__VA_ARGS__)
+#ifdef DEBUG // 处于开发阶段
+#define HJFLog(...) //NSLog(__VA_ARGS__)  //普通打印
+#define HJFHTTPLog(...) //NSLog(__VA_ARGS__) //http打印
+#define HJFTCPLog(...) NSLog(__VA_ARGS__)   //TCP打印
+#define HJFUDPLog(...) //NSLog(__VA_ARGS__)   //UDP打印
+#else // 处于发布阶段
+#define HJFLog(...)
+#define HJFHTTPLog(...)
+#define HJFTCPLog(...)
+#define HJFUDPLog(...)
+#endif
+
+//缺水通知
+#define DeviceWater_Notification             @"DeviceWater"
+//设备更新
+#define UpdateStatus_Notification           @"UpdateStatus"
+#endif

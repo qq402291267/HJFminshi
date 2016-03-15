@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HJFLoginVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    application.statusBarHidden = NO;
+    application.statusBarStyle = UIStatusBarStyleDefault ;
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    HJFLoginVC *tabVC =[[HJFLoginVC alloc]init];
+    
+    self.window.rootViewController = tabVC;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

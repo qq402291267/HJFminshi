@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HJFLoginVC.h
 //  HJFminshi
 //
 //  Created by 胡江峰 on 16/3/7.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HJFLoginVC : UIViewController
 
 @end
-
