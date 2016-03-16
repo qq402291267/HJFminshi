@@ -4,14 +4,14 @@
 //
 //  Created by 胡江峰 on 16/3/7.
 //  Copyright © 2016年 胡江峰. All rights reserved.
-//dfgdfg
+//
 
 #import "HJFLoginVC.h"
 #import "comMethod.h"
 #import "HTTPService.h"
 #import "RemoteService.h"
+//#import "LocalService.h"
 #import "UDPMethod.h"
-#import "MBProgressHUD+NJ.h"
 //登入界面下滑高度
 #define loginViewScrollViewContentSize              548
 
